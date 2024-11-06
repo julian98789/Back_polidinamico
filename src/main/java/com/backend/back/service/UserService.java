@@ -19,7 +19,7 @@ public class UserService {
         if (user != null && user.getPassword().equals(password)) {
             return user;
         }
-        return null; // Usuario no encontrado o contraseña incorrecta
+        return null;
     }
 
     public String getPasswordByEmail(String email) {

@@ -24,7 +24,7 @@ public class UserController {
     public ResponseEntity<User> register(@RequestBody UserDTO userDTO) {
         User user = new User();
         user.setEmail(userDTO.getEmail());
-        user.setPassword(userDTO.getPassword()); // En un entorno real, deberías encriptar la contraseña.
+        user.setPassword(userDTO.getPassword());
         user.setRole(Role.valueOf(userDTO.getRole().name()));
         return ResponseEntity.ok(userService.register(user));
     }
